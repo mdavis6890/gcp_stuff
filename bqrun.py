@@ -22,6 +22,9 @@ args = parser.parse_args()
 parser.parse_args()
 if args.debug:
     logging.basicConfig(level=log_choices[args.debug])
+else:
+    logging.basicConfig(level=logging.INFO)
+
 
 query_file = args.f
 client = bigquery.Client()
