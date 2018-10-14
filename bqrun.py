@@ -24,6 +24,7 @@ if args.debug:
     logging.basicConfig(level=log_choices[args.debug])
 
 query_file = args.f
+client = bigquery.Client()
 
 query_list = []
 with query_file:
@@ -32,17 +33,26 @@ with query_file:
     query_list = [s for s in query_text.split(';') if len(s) > 0 ]
 
 
-    client = bigquery.Client()
     total_runtime = 0.0
+    total_bytes_billed = 0.0
+    total_bytes_processed = 0.0
     for query in query_list:
         logging.debug("Running Query: {}".format(query))
         try:
-            job = client.query(query)
+            job_config = bigquery.QueryJobConfig()
+            job_config.use_query_cache = False # Don't cache for benchmarks
+            job = client.query(query, job_config=job_config)
             job.result() # waits for job to finish - serial execution
             td_sec = (job.ended - job.started).total_seconds()
             total_runtime = total_runtime + td_sec
-            logging.info("Query completed in {} seconds.".format(td_sec))
-            logging.info("Total runtime so far: {} seconds".format(total_runtime))
+            total_bytes_billed = total_bytes_billed + job.total_bytes_billed
+            total_bytes_processed = total_bytes_processed + job.total_bytes_processed
+            logging.info("Query completed in {} seconds. Cache: {}".format(td_sec, job.use_query_cache))
+            logging.info("Bytes processed for this query: {}".format(job.total_bytes_processed))
+            logging.info("Bytes billed for this query: {}".format(job.total_bytes_billed))
+            logging.info("Total bytes billed so far: {}".format(total_bytes_billed))
+            logging.info("Total bytes processed so far: {}.".format(total_bytes_processed))
+            logging.info("Total runtime so far: {} seconds\n\n".format(total_runtime))
         except Exception as e:
             logging.error("Query Failed: {}".format(query))
             logging.error(e)
