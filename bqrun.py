@@ -30,7 +30,8 @@ if args.debug:
 
 
 query_file = args.file
-max_queries = args.max_queries
+if args.max_queries:
+    max_queries = args.max_queries
 cache = args.cache
 client = bigquery.Client()
 
@@ -38,7 +39,11 @@ query_list = []
 with query_file:
     query_text = query_file.read()
     # Does a split as expected, but only keeps non-empty strings.
-    query_list = [s.strip() for s in query_text.split(';', max_queries) if len(s) > 0 ]
+    query_splits = query_text.split(';')
+    if max_queries:
+        query_list = [s.strip() for s in query_splits if len(s) > 0 ][:max_queries]
+    else:
+        query_list = [s.strip() for s in query_splits if len(s) > 0 ]
 
     total_runtime = 0.0
     total_bytes_billed = 0.0
