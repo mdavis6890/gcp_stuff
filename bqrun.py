@@ -36,6 +36,8 @@ cache = args.cache
 client = bigquery.Client()
 
 query_list = []
+successful_queries = 0
+failed_queries = 0
 with query_file:
     query_text = query_file.read()
     # Does a split as expected, but only keeps non-empty strings.
@@ -49,8 +51,7 @@ with query_file:
     total_bytes_billed = 0.0
     total_bytes_processed = 0.0
     query_num = 0
-    successful_queries = 0
-    failed_queries = 0
+
     for query in query_list:
         query_num = query_num + 1
         logging.debug("Running Query: {}".format(query))
@@ -80,8 +81,8 @@ with query_file:
             failed_queries += 1
 
 print("Allow Cache: {}".format(cache))
-print("Successful Queries".format(successful_queries))
-print("Failed Queries".format(failed_queries))
+print("Successful Queries: {}".format(successful_queries))
+print("Failed Queries: {}".format(failed_queries))
 print("Total bytes billed for this set of queries: {}".format(total_bytes_billed))
 print("Total bytes processed for this set of queries: {}.".format(total_bytes_processed))
 print("Total runtime for this set of queries: {} seconds".format(total_runtime))
