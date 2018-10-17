@@ -19,6 +19,8 @@ parser.add_argument("file", metavar='filename',
                     "to run.", type=argparse.FileType('r'))
 parser.add_argument("-c", "--cache", action='store_true',
                     help="Allow cache")
+parser.add_argument("-d", "--dry_run", action='store_true',
+                    help="Dry run")
 parser.add_argument("-m", "--max_queries", type=int,
                     help="Grab only this number of queries from the top of the file."
                     "The remainder will be discarded. This is ")
@@ -33,6 +35,7 @@ query_file = args.file
 if args.max_queries:
     max_queries = args.max_queries
 cache = args.cache
+dry_run = args.dry_run
 client = bigquery.Client()
 
 query_list = []
@@ -59,6 +62,7 @@ with query_file:
             print("Running query {}/{}".format(query_num, len(query_list)))
             job_config = bigquery.QueryJobConfig()
             job_config.use_query_cache = cache  # Don't cache for benchmarks
+            job_config.dry_run = dry_run
  
             job = client.query(query, job_config=job_config)
             job.result()  # waits for job to finish - serial execution
