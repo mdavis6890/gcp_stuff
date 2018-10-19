@@ -19,7 +19,7 @@ parser.add_argument("file", metavar='filename',
                     "to run.", type=argparse.FileType('r'))
 parser.add_argument("-c", "--cache", action='store_true',
                     help="Allow cache")
-parser.add_argument("-d", "--dry_run", action='store_true',
+parser.add_argument("-r", "--dry_run", action='store_true',
                     help="Dry run")
 parser.add_argument("-m", "--max_queries", type=int,
                     help="Grab only this number of queries from the top of the file."
@@ -32,8 +32,7 @@ if args.debug:
 
 
 query_file = args.file
-if args.max_queries:
-    max_queries = args.max_queries
+max_queries = args.max_queries
 cache = args.cache
 dry_run = args.dry_run
 client = bigquery.Client()
