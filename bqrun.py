@@ -60,6 +60,7 @@ with query_file:
     for query in query_list:
         query_num = query_num + 1
         logging.debug("Running Query: {}".format(query))
+        job = None
         try:
             print("Running query {}/{}".format(query_num, len(query_list)))
             job_config = bigquery.QueryJobConfig()
@@ -84,6 +85,7 @@ with query_file:
             logging.info("Total bytes processed so far: {}.".format(total_bytes_processed))
             successful_queries += 1
         except Exception as e:
+            logging.error("Job ID: {}".format(job.job_id))
             logging.error("Query Failed:\n{}".format(query))
             logging.error("{}\n\n".format(e))
             failed_queries += 1
