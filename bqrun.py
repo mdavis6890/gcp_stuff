@@ -85,7 +85,8 @@ with query_file:
             logging.info("Total bytes processed so far: {}.".format(total_bytes_processed))
             successful_queries += 1
         except Exception as e:
-            logging.error("Job ID: {}".format(job.job_id))
+            if not dry_run:
+                logging.error("Job ID: {}".format(job.job_id))
             logging.error("Query Failed:\n{}".format(query))
             logging.error("{}\n\n".format(e))
             failed_queries += 1
