@@ -93,7 +93,7 @@ with query_file:
                 successful_queries += 1
                 break
             except BadRequest as e:
-                logging.debug("testType: {}".format(type(e)))
+                logging.debug("Type: {}".format(type(e)))
                 if not dry_run:
                     logging.error("Job ID: {}".format(job.job_id))
                 logging.error("Query Failed:\n{}".format(query))
@@ -106,7 +106,8 @@ with query_file:
                     logging.error("Job ID: {}".format(job.job_id))
                 logging.error("Query Failed:\n{}".format(query))
                 logging.error("{}\n\n".format(e))
-                failed_queries += 1
+                if i == 4:
+                    failed_queries += 1
 
 print("Allow Cache: {}".format(cache))
 print("Successful Queries: {}".format(successful_queries))
