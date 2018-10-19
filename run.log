@@ -1,0 +1,490 @@
+ERROR:root:Job ID: ba6b1df0-783e-4327-a498-6e30e1ed28cb
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:google.auth.transport._http_client:Making request: GET http://169.254.169.254
+DEBUG:google.auth.transport._http_client:Making request: GET http://metadata.google.internal/computeMetadata/v1/project/project-id
+DEBUG:google.auth.transport._http_client:Making request: GET http://169.254.169.254
+DEBUG:google.auth.transport._http_client:Making request: GET http://metadata.google.internal/computeMetadata/v1/project/project-id
+DEBUG:root:Running Query: SELECT 1
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/?recursive=true
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): metadata.google.internal:80
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/default/?recursive=true HTTP/1.1" 200 144
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/331561995031-compute@developer.gserviceaccount.com/token
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/331561995031-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 843370.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+DEBUG:root:Running Query: SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 400 None
+DEBUG:root:Type: <class 'google.api_core.exceptions.BadRequest'>
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:root:Running Query: SELECT 2
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+DEBUG:google.auth.transport._http_client:Making request: GET http://169.254.169.254
+DEBUG:google.auth.transport._http_client:Making request: GET http://metadata.google.internal/computeMetadata/v1/project/project-id
+DEBUG:google.auth.transport._http_client:Making request: GET http://169.254.169.254
+DEBUG:google.auth.transport._http_client:Making request: GET http://metadata.google.internal/computeMetadata/v1/project/project-id
+DEBUG:root:Running Query: SELECT 1
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/?recursive=true
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): metadata.google.internal:80
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/default/?recursive=true HTTP/1.1" 200 144
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/331561995031-compute@developer.gserviceaccount.com/token
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/331561995031-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 843370.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+DEBUG:root:Running Query: SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 400 None
+DEBUG:root:Type: <class 'google.api_core.exceptions.BadRequest'>
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:root:Running Query: SELECT 2
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 843370.0.
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 843370.0.
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 843370.0.
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 843370.0.
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+DEBUG:google.auth.transport._http_client:Making request: GET http://169.254.169.254
+DEBUG:google.auth.transport._http_client:Making request: GET http://metadata.google.internal/computeMetadata/v1/project/project-id
+DEBUG:google.auth.transport._http_client:Making request: GET http://169.254.169.254
+DEBUG:google.auth.transport._http_client:Making request: GET http://metadata.google.internal/computeMetadata/v1/project/project-id
+DEBUG:root:Running Query: SELECT 1
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/?recursive=true
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): metadata.google.internal:80
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/default/?recursive=true HTTP/1.1" 200 144
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/331561995031-compute@developer.gserviceaccount.com/token
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/331561995031-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 843370.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+DEBUG:root:Running Query: SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 400 None
+DEBUG:root:testType: <class 'google.api_core.exceptions.BadRequest'>
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:root:Running Query: SELECT 2
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+DEBUG:google.auth.transport._http_client:Making request: GET http://169.254.169.254
+DEBUG:google.auth.transport._http_client:Making request: GET http://metadata.google.internal/computeMetadata/v1/project/project-id
+DEBUG:google.auth.transport._http_client:Making request: GET http://169.254.169.254
+DEBUG:google.auth.transport._http_client:Making request: GET http://metadata.google.internal/computeMetadata/v1/project/project-id
+DEBUG:root:Running Query: SELECT 1
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/?recursive=true
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): metadata.google.internal:80
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/default/?recursive=true HTTP/1.1" 200 144
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/331561995031-compute@developer.gserviceaccount.com/token
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/331561995031-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 843370.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 2530110.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 3373480.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 4216850.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 5060220.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 5903590.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 6746960.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 7590330.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 8433700.0.
+DEBUG:root:Running Query: SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 400 None
+DEBUG:root:testType: <class 'google.api_core.exceptions.BadRequest'>
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 400 None
+DEBUG:root:testType: <class 'google.api_core.exceptions.BadRequest'>
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 400 None
+DEBUG:root:testType: <class 'google.api_core.exceptions.BadRequest'>
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 400 None
+DEBUG:root:testType: <class 'google.api_core.exceptions.BadRequest'>
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 400 None
+DEBUG:root:testType: <class 'google.api_core.exceptions.BadRequest'>
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:root:Running Query: SELECT 2
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 8433700.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 8433700.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 8433700.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 8433700.0.
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 8433700.0.
+DEBUG:google.auth.transport._http_client:Making request: GET http://169.254.169.254
+DEBUG:google.auth.transport._http_client:Making request: GET http://metadata.google.internal/computeMetadata/v1/project/project-id
+DEBUG:google.auth.transport._http_client:Making request: GET http://169.254.169.254
+DEBUG:google.auth.transport._http_client:Making request: GET http://metadata.google.internal/computeMetadata/v1/project/project-id
+DEBUG:root:Running Query: SELECT 1
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/?recursive=true
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): metadata.google.internal:80
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/default/?recursive=true HTTP/1.1" 200 144
+DEBUG:google.auth.transport.requests:Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/331561995031-compute@developer.gserviceaccount.com/token
+DEBUG:urllib3.connectionpool:http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/331561995031-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 189
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 843370.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 843370
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.
+DEBUG:root:Running Query: SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 400 None
+DEBUG:root:testType: <class 'google.api_core.exceptions.BadRequest'>
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:root:Running Query: SELECT 2
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1686740.0.

@@ -1,4 +1,5 @@
 from google.cloud import bigquery
+from google.api_core.exceptions import BadRequest
 import logging
 import argparse
 import pdb
@@ -29,10 +30,14 @@ parser.add_argument("-m", "--max_queries", type=int,
 
 args = parser.parse_args()
 parser.parse_args()
+# logging.getLogger().addHandler(logging.StreamHandler())
 if args.debug:
-    logging.basicConfig(level=log_choices[args.debug])
+    logging.basicConfig(
+            level=log_choices[args.debug],
+            filename='run.log'
+            )
 else:
-    logging.basicConfig()
+    logging.basicConfig(filename='run.log')
 
 
 query_file = args.file
@@ -62,35 +67,46 @@ with query_file:
         query_num = query_num + 1
         logging.debug("Running Query: {}".format(query))
         job = None
-        try:
-            print("Running query {}/{}".format(query_num, len(query_list)))
-            job_config = bigquery.QueryJobConfig()
-            job_config.use_query_cache = cache  # Don't cache for benchmarks
-            job_config.dry_run = dry_run
-            #pdb.set_trace()
+        for i in range(5):
+            try:
+                print("Running query {}/{}".format(query_num, len(query_list)))
+                job_config = bigquery.QueryJobConfig()
+                job_config.use_query_cache = cache  # Don't cache for benchmarks
+                job_config.dry_run = dry_run
+             #pdb.set_trace()
  
-            job = client.query(query, job_config=job_config)
-            if not dry_run:
-                job.result()  # waits for job to finish - serial execution
-                td_sec = (job.ended - job.started).total_seconds()
-                total_runtime = total_runtime + td_sec
-                logging.info("Query completed in {} seconds. Cache: {}".format(td_sec, job.use_query_cache))
-                logging.info("Total runtime so far: {} seconds\n\n".format(total_runtime))
+                job = client.query(query, job_config=job_config)
+                if not dry_run:
+                    job.result()  # waits for job to finish - serial execution
+                    td_sec = (job.ended - job.started).total_seconds()
+                    total_runtime = total_runtime + td_sec
+                    logging.info("Query completed in {} seconds. Cache: {}".format(td_sec, job.use_query_cache))
+                    logging.info("Total runtime so far: {} seconds\n\n".format(total_runtime))
 
-            total_bytes_billed = total_bytes_billed + job.total_bytes_billed
-            total_bytes_processed = total_bytes_processed + job.total_bytes_processed
+                total_bytes_billed = total_bytes_billed + job.total_bytes_billed
+                total_bytes_processed = total_bytes_processed + job.total_bytes_processed
  
-            logging.info("Bytes processed for this query: {}".format(job.total_bytes_processed))
-            logging.info("Bytes billed for this query: {}".format(job.total_bytes_billed))
-            logging.info("Total bytes billed so far: {}".format(total_bytes_billed))
-            logging.info("Total bytes processed so far: {}.".format(total_bytes_processed))
-            successful_queries += 1
-        except Exception as e:
-            if not dry_run:
-                logging.error("Job ID: {}".format(job.job_id))
-            logging.error("Query Failed:\n{}".format(query))
-            logging.error("{}\n\n".format(e))
-            failed_queries += 1
+                logging.info("Bytes processed for this query: {}".format(job.total_bytes_processed))
+                logging.info("Bytes billed for this query: {}".format(job.total_bytes_billed))
+                logging.info("Total bytes billed so far: {}".format(total_bytes_billed))
+                logging.info("Total bytes processed so far: {}.".format(total_bytes_processed))
+                successful_queries += 1
+                break
+            except BadRequest as e:
+                logging.debug("testType: {}".format(type(e)))
+                if not dry_run:
+                    logging.error("Job ID: {}".format(job.job_id))
+                logging.error("Query Failed:\n{}".format(query))
+                logging.error("{}\n\n".format(e))
+                failed_queries += 1
+                break
+            except Exception as e:
+                logging.error("Type: {}".format(type(e)))
+                if not dry_run:
+                    logging.error("Job ID: {}".format(job.job_id))
+                logging.error("Query Failed:\n{}".format(query))
+                logging.error("{}\n\n".format(e))
+                failed_queries += 1
 
 print("Allow Cache: {}".format(cache))
 print("Successful Queries: {}".format(successful_queries))
