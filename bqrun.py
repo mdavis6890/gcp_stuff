@@ -2,6 +2,7 @@ from google.cloud import bigquery
 import logging
 import argparse
 import pdb
+import re
 
 parser = argparse.ArgumentParser()
 
@@ -45,8 +46,8 @@ successful_queries = 0
 failed_queries = 0
 with query_file:
     query_text = query_file.read()
-    # Does a split as expected, but only keeps non-empty strings.
-    query_splits = query_text.split(';')
+    # Does a split on ; then filters to remove empty lines
+    query_splits = filter(lambda x: not re.match(r'^\s*$', x), query_text.split(';'))
     if max_queries:
         query_list = [s.strip() for s in query_splits if len(s) > 0 ][:max_queries]
     else:
