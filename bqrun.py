@@ -74,16 +74,16 @@ with query_file:
                 job.result()  # waits for job to finish - serial execution
                 td_sec = (job.ended - job.started).total_seconds()
                 total_runtime = total_runtime + td_sec
-                logging.info("Query completed in {} seconds. Cache: {}".format(td_sec, job.use_query_cache))
-                logging.info("Total runtime so far: {} seconds\n\n".format(total_runtime))
+                logging.info("Query completed in {:,} seconds. Cache: {}".format(td_sec, job.use_query_cache))
+                logging.info("Total runtime so far: {:,} seconds\n\n".format(total_runtime))
 
             total_bytes_billed = total_bytes_billed + job.total_bytes_billed
             total_bytes_processed = total_bytes_processed + job.total_bytes_processed
  
-            logging.info("Bytes processed for this query: {}".format(job.total_bytes_processed))
-            logging.info("Bytes billed for this query: {}".format(job.total_bytes_billed))
-            logging.info("Total bytes billed so far: {}".format(total_bytes_billed))
-            logging.info("Total bytes processed so far: {}.".format(total_bytes_processed))
+            logging.info("Bytes processed for this query: {:,}".format(job.total_bytes_processed))
+            logging.info("Bytes billed for this query: {:,}".format(job.total_bytes_billed))
+            logging.info("Total bytes billed so far: {:,}".format(total_bytes_billed))
+            logging.info("Total bytes processed so far: {:,}.".format(total_bytes_processed))
             successful_queries += 1
         except Exception as e:
             if not dry_run:
@@ -96,8 +96,8 @@ print("Allow Cache: {}".format(cache))
 print("Successful Queries: {}".format(successful_queries))
 print("Failed Queries: {}".format(failed_queries))
 if not dry_run:
-    print("Total bytes billed for this set of queries: {}".format(total_bytes_billed))
-    print("Total runtime for this set of queries: {} seconds".format(total_runtime))
-print("Total bytes processed for this set of queries: {}.".format(total_bytes_processed))
+    print("Total bytes billed for this set of queries: {:,}".format(total_bytes_billed))
+    print("Total runtime for this set of queries: {:,} seconds".format(total_runtime))
+print("Total bytes processed for this set of queries: {:,}.".format(total_bytes_processed))
 print("Note that only successful queries are included in these totals.")
 
