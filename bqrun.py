@@ -75,7 +75,7 @@ with query_file:
                 td_sec = (job.ended - job.started).total_seconds()
                 total_runtime = total_runtime + td_sec
                 logging.info("Query completed in {:,} seconds. Cache: {}".format(td_sec, job.use_query_cache))
-                logging.info("Total runtime so far: {:,} seconds\n\n".format(total_runtime))
+                logging.info("Total runtime so far: {:,} seconds".format(total_runtime))
 
             total_bytes_billed = total_bytes_billed + job.total_bytes_billed
             total_bytes_processed = total_bytes_processed + job.total_bytes_processed
@@ -83,7 +83,7 @@ with query_file:
             logging.info("Bytes processed for this query: {:,}".format(job.total_bytes_processed))
             logging.info("Bytes billed for this query: {:,}".format(job.total_bytes_billed))
             logging.info("Total bytes billed so far: {:,}".format(total_bytes_billed))
-            logging.info("Total bytes processed so far: {:,}.".format(total_bytes_processed))
+            logging.info("Total bytes processed so far: {:,}.\n\n".format(total_bytes_processed))
             successful_queries += 1
         except Exception as e:
             if not dry_run:
