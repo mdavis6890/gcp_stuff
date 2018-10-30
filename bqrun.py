@@ -39,7 +39,6 @@ query_file = args.file
 max_queries = args.max_queries
 cache = args.cache
 dry_run = bool(args.dry_run)
-client = bigquery.Client()
 
 query_list = []
 successful_queries = 0
@@ -59,6 +58,7 @@ with query_file:
     query_num = 0
 
     for query in query_list:
+        client = bigquery.Client()
         query_num = query_num + 1
         logging.debug("Running Query: {}".format(query))
         job = None
