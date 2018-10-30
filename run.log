@@ -488,3 +488,219 @@ INFO:root:Bytes processed for this query: 0
 INFO:root:Bytes billed for this query: 0
 INFO:root:Total bytes billed so far: 0.0
 INFO:root:Total bytes processed so far: 1686740.0.
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+INFO:root:Bytes processed for this query: 896170
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 896170.0.
+INFO:root:Bytes processed for this query: 896170
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1792340.0.
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1792340.0.
+DEBUG:root:Running Query: SELECT 1
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: POST https://oauth2.googleapis.com/token
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: POST https://oauth2.googleapis.com/token
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 896170
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 896170.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: POST https://oauth2.googleapis.com/token
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 896170
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1792340.0.
+DEBUG:root:Running Query: SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: POST https://oauth2.googleapis.com/token
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 400 None
+DEBUG:root:Type: <class 'google.api_core.exceptions.BadRequest'>
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 POST https://www.googleapis.com/bigquery/v2/projects/davmichael-testing/jobs: Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:root:Running Query: SELECT 2
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: POST https://oauth2.googleapis.com/token
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 1792340.0.
+INFO:root:Query completed in 0.964 seconds. Cache: False
+INFO:root:Total runtime so far: 0.964 seconds
+
+
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+INFO:root:Query completed in 1.253 seconds. Cache: False
+INFO:root:Total runtime so far: 2.217 seconds
+
+
+INFO:root:Bytes processed for this query: 896214
+INFO:root:Bytes billed for this query: 10485760
+INFO:root:Total bytes billed so far: 10485760.0
+INFO:root:Total bytes processed so far: 896214.0.
+INFO:root:Query completed in 1.079 seconds. Cache: False
+INFO:root:Total runtime so far: 3.296 seconds
+
+
+INFO:root:Bytes processed for this query: 896214
+INFO:root:Bytes billed for this query: 10485760
+INFO:root:Total bytes billed so far: 20971520.0
+INFO:root:Total bytes processed so far: 1792428.0.
+ERROR:root:Job ID: 76df82af-6ebb-49a2-9d75-934f9211a2fb
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+INFO:root:Query completed in 0.789 seconds. Cache: False
+INFO:root:Total runtime so far: 4.085 seconds
+
+
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 20971520.0
+INFO:root:Total bytes processed so far: 1792428.0.
+DEBUG:root:Running Query: SELECT 1
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: POST https://oauth2.googleapis.com/token
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "GET /bigquery/v2/projects/davmichael-testing/queries/0a081a96-9d28-400b-8c5a-0828e3899d2b?location=US&maxResults=0 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "GET /bigquery/v2/projects/davmichael-testing/jobs/0a081a96-9d28-400b-8c5a-0828e3899d2b?location=US HTTP/1.1" 200 None
+INFO:root:Query completed in 0.823 seconds. Cache: False
+INFO:root:Total runtime so far: 0.823 seconds
+
+
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 0.0
+INFO:root:Total bytes processed so far: 0.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: POST https://oauth2.googleapis.com/token
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "GET /bigquery/v2/projects/davmichael-testing/queries/085f10cd-3dc6-440e-8436-537b4fdfb73d?location=US&maxResults=0 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "GET /bigquery/v2/projects/davmichael-testing/jobs/085f10cd-3dc6-440e-8436-537b4fdfb73d?location=US HTTP/1.1" 200 None
+INFO:root:Query completed in 1.044 seconds. Cache: False
+INFO:root:Total runtime so far: 1.867 seconds
+
+
+INFO:root:Bytes processed for this query: 896214
+INFO:root:Bytes billed for this query: 10485760
+INFO:root:Total bytes billed so far: 10485760.0
+INFO:root:Total bytes processed so far: 896214.0.
+DEBUG:root:Running Query: SELECT billing_account_id FROM `davmichael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: POST https://oauth2.googleapis.com/token
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "GET /bigquery/v2/projects/davmichael-testing/queries/facaa350-0097-4072-850b-603c7630a118?location=US&maxResults=0 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "GET /bigquery/v2/projects/davmichael-testing/jobs/facaa350-0097-4072-850b-603c7630a118?location=US HTTP/1.1" 200 None
+INFO:root:Query completed in 1.307 seconds. Cache: False
+INFO:root:Total runtime so far: 3.174 seconds
+
+
+INFO:root:Bytes processed for this query: 896214
+INFO:root:Bytes billed for this query: 10485760
+INFO:root:Total bytes billed so far: 20971520.0
+INFO:root:Total bytes processed so far: 1792428.0.
+DEBUG:root:Running Query: SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: POST https://oauth2.googleapis.com/token
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+DEBUG:root:Type: <class 'google.api_core.exceptions.BadRequest'>
+ERROR:root:Job ID: 53b32972-58e3-4227-906a-25d493b7459e
+ERROR:root:Query Failed:
+SELECT
+billing_account_id
+   FROM
+`davmich ael-testing.billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8`
+ERROR:root:400 Invalid table name: davmich ael-testing:billing_info.gcp_billing_export_v1_012BDF_E5CCA9_BBAFF8
+
+
+DEBUG:root:Running Query: SELECT 2
+DEBUG:urllib3.util.retry:Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+DEBUG:google.auth.transport.requests:Making request: POST https://oauth2.googleapis.com/token
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): oauth2.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.googleapis.com:443
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "POST /bigquery/v2/projects/davmichael-testing/jobs HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "GET /bigquery/v2/projects/davmichael-testing/queries/4526f59c-fa93-4924-a75f-60dee7e62453?location=US&maxResults=0 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://www.googleapis.com:443 "GET /bigquery/v2/projects/davmichael-testing/jobs/4526f59c-fa93-4924-a75f-60dee7e62453?location=US HTTP/1.1" 200 None
+INFO:root:Query completed in 0.606 seconds. Cache: False
+INFO:root:Total runtime so far: 3.78 seconds
+
+
+INFO:root:Bytes processed for this query: 0
+INFO:root:Bytes billed for this query: 0
+INFO:root:Total bytes billed so far: 20971520.0
+INFO:root:Total bytes processed so far: 1792428.0.

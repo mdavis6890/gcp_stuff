@@ -30,21 +30,12 @@ parser.add_argument("-m", "--max_queries", type=int,
 
 args = parser.parse_args()
 parser.parse_args()
-# logging.getLogger().addHandler(logging.StreamHandler())
-if args.debug:
-    logging.basicConfig(
-            level=log_choices[args.debug],
-            filename='run.log'
-            )
-else:
-    logging.basicConfig(filename='run.log')
-
+logging.basicConfig(level=log_choices[args.debug])
 
 query_file = args.file
 max_queries = args.max_queries
 cache = args.cache
 dry_run = bool(args.dry_run)
-client = bigquery.Client()
 
 query_list = []
 successful_queries = 0
@@ -64,6 +55,7 @@ with query_file:
     query_num = 0
 
     for query in query_list:
+        client = bigquery.Client()
         query_num = query_num + 1
         logging.debug("Running Query: {}".format(query))
         job = None
@@ -71,9 +63,8 @@ with query_file:
             try:
                 print("Running query {}/{}".format(query_num, len(query_list)))
                 job_config = bigquery.QueryJobConfig()
-                job_config.use_query_cache = cache  # Don't cache for benchmarks
+                job_config.use_query_cache = cache 
                 job_config.dry_run = dry_run
-             #pdb.set_trace()
  
                 job = client.query(query, job_config=job_config)
                 if not dry_run:
@@ -93,7 +84,7 @@ with query_file:
                 successful_queries += 1
                 break
             except BadRequest as e:
-                logging.debug("Type: {}".format(type(e)))
+                logging.error("Type: {}".format(type(e)))
                 if not dry_run:
                     logging.error("Job ID: {}".format(job.job_id))
                 logging.error("Query Failed:\n{}".format(query))
@@ -113,8 +104,8 @@ print("Allow Cache: {}".format(cache))
 print("Successful Queries: {}".format(successful_queries))
 print("Failed Queries: {}".format(failed_queries))
 if not dry_run:
-    print("Total bytes billed for this set of queries: {}".format(total_bytes_billed))
-    print("Total runtime for this set of queries: {} seconds".format(total_runtime))
-print("Total bytes processed for this set of queries: {}.".format(total_bytes_processed))
+    print("Total bytes billed for this set of queries: {:,}".format(total_bytes_billed))
+    print("Total runtime for this set of queries: {:,} seconds".format(total_runtime))
+print("Total bytes processed for this set of queries: {:,}.".format(total_bytes_processed))
 print("Note that only successful queries are included in these totals.")
 
